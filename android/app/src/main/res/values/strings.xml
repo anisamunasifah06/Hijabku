@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">HijabKu</string>
+    <string name="tagline">Tampil Anggun, Tetap Nyaman.</string>
+    <string name="search_hint">Cari hijab favoritmu...</string>
+    <string name="btn_login">Masuk</string>
+    <string name="btn_login_google">Masuk dengan Google</string>
+    <string name="btn_register">Daftar</string>
+    <string name="btn_add_to_cart">Tambah Keranjang</string>
+    <string name="btn_buy_now">Beli Sekarang</string>
+    <string name="btn_checkout">Checkout</string>
+    <string name="btn_pay_now">Bayar Sekarang</string>
+    <string name="btn_check_payment_status">Cek Status Pembayaran</string>
+    <string name="btn_track_order">Lacak Pengiriman</string>
+    <string name="btn_write_review">Tulis Ulasan</string>
+    
+    <!-- Navigation Titles -->
+    <string name="menu_home">Beranda</string>
+    <string name="menu_category">Kategori</string>
+    <string name="menu_cart">Keranjang</string>
+    <string name="menu_orders">Pesanan</string>
+    <string name="menu_account">Akun</string>
+    
+    <!-- Messages -->
+    <string name="error_connection">Terjadi masalah koneksi. Silakan coba lagi.</string>
+    <string name="cart_empty">Keranjang belanja Anda masih kosong</string>
+    <string name="cart_added">Produk berhasil ditambahkan ke keranjang</string>
+    <string name="copied_to_clipboard">Tersalin ke papan klip!</string>
+</resources>

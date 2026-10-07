@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface">
+
+    <!-- Top Action Bar -->
+    <LinearLayout
+        android:id="@+id/layoutPashminaHeader"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="12dp"
+        android:background="@color/surface_container_lowest"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:padding="6dp"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="Back" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:text="Pashmina"
+                android:textColor="@color/primary_container"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="142 Koleksi Pilihan"
+                android:textColor="@color/on_surface_variant"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/btnSearch"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:padding="4dp"
+            android:src="@drawable/ic_search" />
+    </LinearLayout>
+
+    <!-- Horizontal Filter Chips Scroll -->
+    <HorizontalScrollView
+        android:id="@+id/hsvFilters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:paddingVertical="8dp"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintTop_toBottomOf="@id/layoutPashminaHeader">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:text="Semua"
+                android:textColor="@color/on_primary"
+                android:backgroundTint="@color/primary_container"
+                android:textSize="11sp"
+                app:cornerRadius="17dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_marginStart="8dp"
+                android:text="Silk"
+                android:textColor="@color/on_surface"
+                android:backgroundTint="@color/surface_container_lowest"
+                android:textSize="11sp"
+                app:strokeColor="@color/outline_variant"
+                app:strokeWidth="1dp"
+                app:cornerRadius="17dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_marginStart="8dp"
+                android:text="Ceruty"
+                android:textColor="@color/on_surface"
+                android:backgroundTint="@color/surface_container_lowest"
+                android:textSize="11sp"
+                app:strokeColor="@color/outline_variant"
+                app:strokeWidth="1dp"
+                app:cornerRadius="17dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_marginStart="8dp"
+                android:text="Plisket"
+                android:textColor="@color/on_surface"
+                android:backgroundTint="@color/surface_container_lowest"
+                android:textSize="11sp"
+                app:strokeColor="@color/outline_variant"
+                app:strokeWidth="1dp"
+                app:cornerRadius="17dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_marginStart="8dp"
+                android:text="Terlaris"
+                android:textColor="@color/on_surface"
+                android:backgroundTint="@color/surface_container_lowest"
+                android:textSize="11sp"
+                app:strokeColor="@color/outline_variant"
+                app:strokeWidth="1dp"
+                app:cornerRadius="17dp" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- 2 Column Product Grid -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPashminaProducts"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingHorizontal="12dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hsvFilters"
+        tools:itemCount="4"
+        tools:listitem="@layout/item_product_card" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
